@@ -10,7 +10,44 @@
 
 
 </div>
+<hr>
+<div class="ui form">
+    <div class="inline fields">
+      <label for="fruit">Select Select Cases Type:</label>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" value="c" id="c" #c (click)='updateChart(c)' name="casetype" checked="" tabindex="0" class="hidden">
+          <label for="c">Confromed</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" id="d" #d (click)='updateChart(d)' value="d" name="casetype" tabindex="0" class="hidden">
+          <label for="d">Death</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" id="r" value="r" #r (click)='updateChart(r)' name="casetype" tabindex="0" class="hidden">
+          <label for="r">Recovered</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" id="a" value="a" #a (click)='updateChart(a)' name="casetype" tabindex="0" class="hidden">
+          <label for="a">Active</label>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 
-    <google-chart [data]="pieChart"></google-chart>
-    <google-chart [data]="columChart"></google-chart>
+<div class="row">
+    <div class="col">
+        <google-chart [data]="columChart"></google-chart>
+    </div>
+    <div class="col">
+        <google-chart [data]="pieChart"></google-chart>
+    </div>
+</div>
     

@@ -7,7 +7,7 @@ import {map} from 'rxjs/operators';
 })
 export class DataServiceService {
 
-  private globalDataUrl='https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/07-25-2020.csv';
+  private globalDataUrl='https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/07-26-2020.csv';
 
   constructor(private http:HttpClient) { }
 

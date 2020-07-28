@@ -28,10 +28,11 @@ export class HomeComponent implements OnInit {
 
     datatable.push(["Country","Cases"])
     this.globalData.forEach(cs=>{
-      datatable.push([
-        cs.country,
-        cs.confirmed
-      ])
+      if(cs.confirmed > 100000)
+        datatable.push([
+          cs.country,
+          cs.confirmed
+        ])
     })
     console.log(datatable);
     
@@ -72,6 +73,11 @@ export class HomeComponent implements OnInit {
       }
     });
     
+  }
+
+  updateChart(input:HTMLInputElement){
+      console.log(input.value);
+      
   }
 
 
